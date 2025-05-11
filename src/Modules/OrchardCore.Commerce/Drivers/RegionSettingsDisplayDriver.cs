@@ -66,7 +66,9 @@ public class RegionSettingsDisplayDriver : SiteDisplayDriver<RegionSettings>
     {
         if (await context.CreateModelMaybeAsync<RegionSettingsViewModel>(Prefix, AuthorizeAsync) is { } viewModel)
         {
-            var allowedRegions = viewModel.AllowedRegions?.AsList() ?? [];
+            var allowedRegions = viewModel.AllowedRegions != null
+                           ? Dapper.SqlMapper.AsList(viewModel.AllowedRegions)
+                           : [];
             var allRegionTwoLetterIsoRegionNames = _regionService
                 .GetAllRegions()
                 .Select(region => region.TwoLetterISORegionName);

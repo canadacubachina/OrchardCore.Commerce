@@ -4,11 +4,11 @@
     <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
   </PropertyGroup>-->
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <PackageReference Condition="!Exists($(LombiqAnalyzersPath))" Include="Lombiq.Analyzers.OrchardCore">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!-- Copying the Orchard logo as an icon to all NuGet-published projects. -->
   <Target Name="Copy NuGet icon"
