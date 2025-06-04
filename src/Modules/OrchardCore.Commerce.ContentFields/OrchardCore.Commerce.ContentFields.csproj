@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
+    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
     <ProjectReference Include="..\..\Libraries\OrchardCore.Commerce.Abstractions\OrchardCore.Commerce.Abstractions.csproj" />
   </ItemGroup>
 
