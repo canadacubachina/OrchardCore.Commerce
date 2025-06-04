@@ -23,6 +23,10 @@
     <None Include="OrchardCoreIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+  </ItemGroup>
+
   <!--<ItemGroup>
     <PackageReference Include="System.Text.Json" />
   </ItemGroup>-->
