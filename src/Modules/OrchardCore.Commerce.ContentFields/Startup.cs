@@ -1,7 +1,5 @@
 using Fluid;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
 using OrchardCore.Commerce.Abstractions.Fields;
 using OrchardCore.Commerce.AddressDataType.Abstractions;
@@ -25,12 +23,6 @@ public class Startup : StartupBase
 {
     public override void ConfigureServices(IServiceCollection services)
     {
-        // Replace the problematic line with the correct implementation
-        services.Configure<StaticFileOptions>(options =>
-        {
-            options.FileProvider = new EmbeddedFileProvider(typeof(Startup).Assembly, "OrchardCore.Commerce.ContentFields");
-        });
-
         services.AddTransient<IConfigureOptions<ResourceManagementOptions>, ResourceManagementOptionsConfiguration>();
         services.AddScoped<IFieldsOnlyDisplayManager, FieldsOnlyDisplayManager>();
 
