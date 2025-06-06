@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrchardCore.Commerce.ContentFields\OrchardCore.Commerce.ContentFields.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Modules\OrchardCore.Commerce.ContentFields\OrchardCore.Commerce.ContentFields.csproj" />
   </ItemGroup>
 
 </Project>
