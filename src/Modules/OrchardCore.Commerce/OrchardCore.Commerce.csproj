@@ -41,6 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
     <ProjectReference Include="..\OrchardCore.Commerce.Inventory\OrchardCore.Commerce.Inventory.csproj" />
     <ProjectReference Include="..\OrchardCore.Commerce.Payment.Exactly\OrchardCore.Commerce.Payment.Exactly.csproj" />
     <ProjectReference Include="..\OrchardCore.Commerce.Payment\OrchardCore.Commerce.Payment.csproj" />
