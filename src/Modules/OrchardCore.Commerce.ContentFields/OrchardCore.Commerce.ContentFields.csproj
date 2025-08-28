@@ -3,23 +3,28 @@
   <PropertyGroup>
     <!--<TargetFramework>net8.0</TargetFramework>-->
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
-    <Title>Orchard Core Commerce - Payment</Title>
+    <Title>Orchard Core Commerce - Content Fields</Title>
     <Authors>Bertrand Le Roy</Authors>
     <Copyright>Copyright © 2018 .NET Foundation</Copyright>
-    <Description>Payment for Orchard Core Commerce</Description>
-    <PackageTags>OrchardCore;OrchardCore.Commerce;Commerce;e-Commerce;Payment</PackageTags>
+    <Description>Commerce-specific content fields.</Description>
+    <PackageTags>OrchardCore;OrchardCore.Commerce;Commerce;e-Commerce;ContentFields</PackageTags>
     <RepositoryUrl>https://github.com/OrchardCMS/OrchardCore.Commerce</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/OrchardCMS/OrchardCore.Commerce/blob/main/src/Modules/OrchardCore.Commerce.Payment/Readme.md</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/OrchardCMS/OrchardCore.Commerce/blob/main/src/Modules/OrchardCore.Commerce.ContentFields/Readme.md</PackageProjectUrl>
     <PackageLicenseFile>License.md</PackageLicenseFile>
     <PackageIcon>OrchardCoreIcon.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--<PackageReference Include="OrchardCore.Indexing.Abstractions" />-->
+    <PackageReference Include="OrchardCore.Module.Targets" />
+    <!--<PackageReference Include="OrchardCore.Templates" />-->
   </ItemGroup>
 
   <ItemGroup>
@@ -30,27 +35,21 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
-    <ProjectReference Include="..\OrchardCore.Commerce.Tax\OrchardCore.Commerce.Tax.csproj" />
+    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+    <ProjectReference Include="..\..\Libraries\OrchardCore.Commerce.Abstractions\OrchardCore.Commerce.Abstractions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <!--<PackageReference Include="OrchardCore.ContentFields" />
-    <PackageReference Include="OrchardCore.ContentManagement" />-->
-    <PackageReference Include="OrchardCore.Module.Targets" />
-  </ItemGroup>
+  <!--<ItemGroup>
+    <ProjectReference Include="..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
+    <ProjectReference Include="..\..\..\OrchardCore.Commerce\src\Libraries\OrchardCore.Commerce.Abstractions\OrchardCore.Commerce.Abstractions.csproj" />
+    <ProjectReference Include="..\..\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+  </ItemGroup>-->
 
   <!--<ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
     <ProjectReference Include="$(LombiqHelpfulLibrariesPath)\Lombiq.HelpfulLibraries.OrchardCore/Lombiq.HelpfulLibraries.OrchardCore.csproj" />
   </ItemGroup>
   <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
     <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
-  </ItemGroup>
-
-  <ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
-    <ProjectReference Include="$(LombiqHelpfulLibrariesPath)\Lombiq.HelpfulLibraries.AspNetCore/Lombiq.HelpfulLibraries.AspNetCore.csproj" />
-  </ItemGroup>
-  <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
-    <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" />
   </ItemGroup>-->
 
 </Project>
