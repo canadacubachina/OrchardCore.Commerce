@@ -3,6 +3,7 @@
   <PropertyGroup>
     <!--<TargetFramework>net8.0</TargetFramework>-->
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -39,20 +40,15 @@
     <ProjectReference Include="..\..\Libraries\OrchardCore.Commerce.Abstractions\OrchardCore.Commerce.Abstractions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="Views\**\*.cshtml">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
+  
   <!-- To use EmbeddedResource for .cshtml files, the project must be a Razor Class Library (RCL).
        If you want to embed .cshtml files, use the following ItemGroup and ensure your project follows RCL conventions.
        Otherwise, keep using <Content> with <CopyToPublishDirectory>. -->
 
   <!-- Example for RCL: -->
-  <!--<ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Views\**\*.cshtml" />
-  </ItemGroup>-->
+  </ItemGroup>
 
   <!--<ItemGroup>
     <ProjectReference Include="..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
