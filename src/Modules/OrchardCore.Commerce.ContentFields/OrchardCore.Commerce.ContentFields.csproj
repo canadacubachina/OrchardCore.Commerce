@@ -36,18 +36,26 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
-    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+    <!--<ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />-->
     <ProjectReference Include="..\..\Libraries\OrchardCore.Commerce.Abstractions\OrchardCore.Commerce.Abstractions.csproj" />
   </ItemGroup>
 
-  
   <!-- To use EmbeddedResource for .cshtml files, the project must be a Razor Class Library (RCL).
        If you want to embed .cshtml files, use the following ItemGroup and ensure your project follows RCL conventions.
        Otherwise, keep using <Content> with <CopyToPublishDirectory>. -->
 
-  <!-- Example for RCL: -->
+  <!-- Remove the EmbeddedResource entry for .cshtml files. -->
+  <!--
   <ItemGroup>
     <EmbeddedResource Include="Views\**\*.cshtml" />
+  </ItemGroup>
+  -->
+
+  <!-- Ensure only this ItemGroup is present for .cshtml files. -->
+  <ItemGroup>
+    <Content Include="Views\**\*.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
   <!--<ItemGroup>
