@@ -14,4 +14,6 @@ public class StripePaymentPart : ContentPart
     public NumericField CardExpMonth { get; set; } = new();
 
     public NumericField CardExpYear { get; set; } = new();
+
+    public DateTimeField CreatedUtcTime { get; set; } = new();
 }
