@@ -36,9 +36,6 @@ public class TaxRateTaxProvider : ITaxProvider
                     item.Content.As<TaxPart>()?.ProductTaxCode?.Text,
                     model.VatNumber,
                     model.IsCorporation);
-
-                if (taxRate <= 0) return item;
-
                 var multiplier = (taxRate / 100m) + 1;
                 return item with { UnitPrice = item.UnitPrice * multiplier };
             })
@@ -60,7 +57,7 @@ public class TaxRateTaxProvider : ITaxProvider
                     model.ShippingAddress,
                     item.Content.As<TaxPart>()?.ProductTaxCode?.Text,
                     model.VatNumber,
-                    model.IsCorporation) >= 0);
+                    model.IsCorporation) > 0);
         });
 
     private static bool IsMatchingOrEmptyPattern(string pattern, string text) =>
@@ -96,6 +93,6 @@ public class TaxRateTaxProvider : ITaxProvider
                 IsMatchingOrEmptyPattern(rate.TaxCode, taxCode);
         });
 
-        return matchingTaxRate == null ? -1 : matchingTaxRate.TaxRate;
+        return matchingTaxRate?.TaxRate ?? 0;
     }
 }
