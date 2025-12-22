@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <!--<TargetFramework>net8.0</TargetFramework>-->
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Module.Targets" />
-    <PackageReference Include="OrchardCore.ContentFields" />
+    <!--<PackageReference Include="OrchardCore.ContentFields" />-->
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrchardCore.Commerce.ContentFields\OrchardCore.Commerce.ContentFields.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Modules\OrchardCore.Commerce.ContentFields\OrchardCore.Commerce.ContentFields.csproj" />
   </ItemGroup>
+
+  
 
 </Project>

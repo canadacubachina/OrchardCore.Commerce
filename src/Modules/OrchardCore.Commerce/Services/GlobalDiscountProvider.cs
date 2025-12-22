@@ -60,7 +60,7 @@ public class GlobalDiscountProvider : IPromotionProvider
                 .Settings[nameof(ContentTypeSettings)]
                 .ToObject<ContentTypeSettings>()?
                 .Stereotype?
-                .EqualsOrdinalIgnoreCase(StereotypeName) == true)
+                .Equals(StereotypeName, StringComparison.OrdinalIgnoreCase) == true)
             .Select(type => type.Name)
             .ToList();
 
