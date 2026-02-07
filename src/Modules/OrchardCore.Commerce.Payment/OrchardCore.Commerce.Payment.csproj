@@ -42,15 +42,23 @@
   <ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
     <ProjectReference Include="$(LombiqHelpfulLibrariesPath)\Lombiq.HelpfulLibraries.OrchardCore/Lombiq.HelpfulLibraries.OrchardCore.csproj" />
   </ItemGroup>
-  <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
+  <!-- <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
     <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
-  </ItemGroup>
+  </ItemGroup> -->
 
   <ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
     <ProjectReference Include="$(LombiqHelpfulLibrariesPath)\Lombiq.HelpfulLibraries.AspNetCore/Lombiq.HelpfulLibraries.AspNetCore.csproj" />
   </ItemGroup>
   <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
-    <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" />
+    <PackageReference Include="Lombiq.HelpfulLibraries.Attributes" />
+     <PackageReference Include="Lombiq.HelpfulLibraries" />
+     <PackageReference Include="Lombiq.HelpfulLibraries.Common" />
+     <PackageReference Include="Lombiq.HelpfulLibraries.SourceGenerators" />
+     <PackageReference Include="Lombiq.HelpfulLibraries.LinqToDb" />
+     <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
+     <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" />
+     <PackageReference Include="Lombiq.HelpfulLibraries.Refit" />
+     
   </ItemGroup>
 
 </Project>
