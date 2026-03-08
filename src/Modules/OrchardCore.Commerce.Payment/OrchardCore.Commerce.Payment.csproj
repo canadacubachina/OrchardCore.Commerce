@@ -28,14 +28,17 @@
     <None Include="OrchardCoreIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
+   <ItemGroup>
+     <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+  </ItemGroup>
   <ItemGroup>
    <!-- <ProjectReference Include=" ..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" /> -->
     <ProjectReference Include="..\OrchardCore.Commerce.Tax\OrchardCore.Commerce.Tax.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.ContentFields" />
-    <PackageReference Include="OrchardCore.ContentManagement" />
+    <!-- <PackageReference Include="OrchardCore.ContentFields" />
+    <PackageReference Include="OrchardCore.ContentManagement" /> -->
     <PackageReference Include="OrchardCore.Module.Targets" />
   </ItemGroup>
 

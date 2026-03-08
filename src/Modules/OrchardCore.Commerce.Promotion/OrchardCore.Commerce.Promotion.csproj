@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Module.Targets" />
-    <PackageReference Include="OrchardCore.ContentFields" />
+    <!-- <PackageReference Include="OrchardCore.ContentFields" /> -->
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +32,9 @@
     <None Include="OrchardCoreIcon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
+   <ItemGroup>
+     <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\src\Modules\OrchardCore.Commerce.ContentFields\OrchardCore.Commerce.ContentFields.csproj" />
   </ItemGroup>

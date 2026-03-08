@@ -39,6 +39,9 @@
     <PackageReference Include="Newtonsoft.Json" />
   </ItemGroup>
 
+   <ItemGroup>
+     <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OrchardCore.Commerce.Payment\OrchardCore.Commerce.Payment.csproj" />
     <ProjectReference Include="..\OrchardCore.Commerce.Promotion\OrchardCore.Commerce.Promotion.csproj" />
