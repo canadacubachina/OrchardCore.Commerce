@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <!--<TargetFramework>net8.0</TargetFramework>-->
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
   </PropertyGroup>
 
   <PropertyGroup>
     <Title>Orchard Core Commerce - Content Fields</Title>
-    <Authors>Orchard Core Community and Contributors</Authors>
+    <Authors>Bertrand Le Roy</Authors>
     <Copyright>Copyright © 2018 .NET Foundation</Copyright>
     <Description>Commerce-specific content fields.</Description>
     <PackageTags>OrchardCore;OrchardCore.Commerce;Commerce;e-Commerce;ContentFields</PackageTags>
@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Indexing.Abstractions" />
+    <!--<PackageReference Include="OrchardCore.Indexing.Abstractions" />-->
     <PackageReference Include="OrchardCore.Module.Targets" />
-    <PackageReference Include="OrchardCore.Templates" />
+    <!--<PackageReference Include="OrchardCore.Templates" />-->
   </ItemGroup>
 
   <ItemGroup>
@@ -34,26 +34,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" />
+    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
     <ProjectReference Include="..\..\Libraries\OrchardCore.Commerce.Abstractions\OrchardCore.Commerce.Abstractions.csproj" />
   </ItemGroup>
 
-  <ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
+  <!--<ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
     <ProjectReference Include="$(LombiqHelpfulLibrariesPath)\Lombiq.HelpfulLibraries.OrchardCore/Lombiq.HelpfulLibraries.OrchardCore.csproj" />
   </ItemGroup>
-  <!-- <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
-  </ItemGroup> -->
-
   <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
-    <PackageReference Include="Lombiq.HelpfulLibraries.Attributes" />
-     <PackageReference Include="Lombiq.HelpfulLibraries" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.Common" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.SourceGenerators" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.LinqToDb" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.Refit" />
-     
-  </ItemGroup>
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
+  </ItemGroup>-->
 
 </Project>
