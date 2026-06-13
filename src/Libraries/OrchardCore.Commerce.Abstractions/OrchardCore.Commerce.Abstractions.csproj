@@ -48,7 +48,7 @@
      <PackageReference Include="Lombiq.HelpfulLibraries.LinqToDb" />
      <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
      <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.Refit" />
+     <!--<PackageReference Include="Lombiq.HelpfulLibraries.Refit" />-->
      
   </ItemGroup>
 </Project>
