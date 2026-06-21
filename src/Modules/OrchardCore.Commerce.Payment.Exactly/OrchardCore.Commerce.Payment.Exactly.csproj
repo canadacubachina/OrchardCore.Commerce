@@ -30,6 +30,7 @@
     <ItemGroup>
         <PackageReference Include="OrchardCore.Module.Targets" />
         <!-- <PackageReference Include="OrchardCore.Settings" /> -->
+      <PackageReference Include="Lombiq.HelpfulLibraries.Refit" />
     </ItemGroup>
 
     
