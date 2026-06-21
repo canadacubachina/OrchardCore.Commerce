@@ -24,31 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.OrchardCore\Lombiq.HelpfulLibraries.OrchardCore.csproj" /> -->
+    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
+  </ItemGroup>
+  
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />   
     <ProjectReference Include="..\OrchardCore.Commerce.AddressDataType\OrchardCore.Commerce.AddressDataType.csproj" />
     <ProjectReference Include="..\OrchardCore.Commerce.MoneyDataType\OrchardCore.Commerce.MoneyDataType.csproj" />
   </ItemGroup>
 
-  <!--<ItemGroup>
-    <PackageReference Include="OrchardCore.ContentFields" />
-  </ItemGroup>-->
 
-  <ItemGroup Condition="Exists($(LombiqHelpfulLibrariesPath))">
-    <ProjectReference Include="$(LombiqHelpfulLibrariesPath)\Lombiq.HelpfulLibraries.OrchardCore/Lombiq.HelpfulLibraries.OrchardCore.csproj" />
-  </ItemGroup>
-  <!-- <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
-    <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
-  </ItemGroup> -->
-
-  <ItemGroup Condition="!Exists($(LombiqHelpfulLibrariesPath))">
-    <PackageReference Include="Lombiq.HelpfulLibraries.Attributes" />
-     <PackageReference Include="Lombiq.HelpfulLibraries" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.Common" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.SourceGenerators" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.LinqToDb" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.OrchardCore" />
-     <PackageReference Include="Lombiq.HelpfulLibraries.AspNetCore" />
-     <!--<PackageReference Include="Lombiq.HelpfulLibraries.Refit" />-->
-     
-  </ItemGroup>
 </Project>
