@@ -53,7 +53,7 @@ public class ContentLocalizationProductService : ProductService
             }
 
             result.Add(parts
-                .OrderByDescending(part => priority.IndexOf(part.ContentItem.GetMaybe<LocalizationPart>()?.Culture))
+                .OrderByDescending(part => priority.IndexOf(part.ContentItem.GetOrCreate<LocalizationPart>()?.Culture))
                 .First());
         }
 

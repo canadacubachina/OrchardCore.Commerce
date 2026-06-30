@@ -1,4 +1,4 @@
-﻿using Lombiq.HelpfulLibraries.OrchardCore.Contents;
+using Lombiq.HelpfulLibraries.OrchardCore.Contents;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
@@ -56,7 +56,7 @@ public class LocalizationCurrencyRedirectMiddleware
                 .ListAsync();
 
             var applicable = localizationSet
-                .GetOrCreate<PricePart>()
+                .As<PricePart>()
                 .FirstOrDefault(part => part.Price.Currency.CurrencyIsoCode == displayCurrency);
 
             if (applicable != null)

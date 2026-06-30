@@ -32,7 +32,7 @@ public class TaxRateTaxProvider : ITaxProvider
                 var taxRate = MatchTaxRate(
                     taxRates.Rates,
                     model.ShippingAddress,
-                    item.Content.GetMaybe<TaxPart>()?.ProductTaxCode?.Text,
+                    item.Content.GetOrCreate<TaxPart>()?.ProductTaxCode?.Text,
                     model.VatNumber,
                     model.IsCorporation);
 
@@ -58,7 +58,7 @@ public class TaxRateTaxProvider : ITaxProvider
                 MatchTaxRate(
                     taxRates.Rates,
                     model.ShippingAddress,
-                    item.Content.GetMaybe<TaxPart>()?.ProductTaxCode?.Text,
+                    item.Content.GetOrCreate<TaxPart>()?.ProductTaxCode?.Text,
                     model.VatNumber,
                     model.IsCorporation) >= 0);
         });

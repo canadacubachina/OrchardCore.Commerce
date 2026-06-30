@@ -308,7 +308,7 @@ public class PaymentService : IPaymentService
                 Status = PaymentOperationStatus.NotFound,
             };
 
-        var status = order.GetMaybe<OrderPart>()?.Status?.Text ?? OrderStatusCodes.Pending;
+        var status = order.GetOrCreate<OrderPart>()?.Status?.Text ?? OrderStatusCodes.Pending;
 
         if (status is not OrderStatusCodes.Pending and not OrderStatusCodes.PaymentFailed)
         {
