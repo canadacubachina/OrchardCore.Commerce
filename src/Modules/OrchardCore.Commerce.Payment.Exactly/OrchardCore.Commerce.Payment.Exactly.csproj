@@ -29,16 +29,17 @@
 
     <ItemGroup>
         <PackageReference Include="OrchardCore.Module.Targets" />
-        <!-- <PackageReference Include="OrchardCore.Settings" /> -->
-      <PackageReference Include="Lombiq.HelpfulLibraries.Refit" />
+      
+      <!-- <PackageReference Include="Lombiq.HelpfulLibraries.Refit" /> -->
     </ItemGroup>
 
     
     <ItemGroup>
         <ProjectReference Include="..\..\..\..\src\GuangCore\GuangCore.TopRef\GuangCore.TopRef.csproj" />
-    </ItemGroup>
-    <ItemGroup>        
-        <ProjectReference Include="..\OrchardCore.Commerce.Payment\OrchardCore.Commerce.Payment.csproj" />
+         <ProjectReference Include="..\OrchardCore.Commerce.Payment\OrchardCore.Commerce.Payment.csproj" />
         <ProjectReference Include="..\OrchardCore.Commerce.Promotion\OrchardCore.Commerce.Promotion.csproj" />
+
+         <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.Refit\Lombiq.HelpfulLibraries.Refit.csproj" />
     </ItemGroup>
+   
 </Project>
