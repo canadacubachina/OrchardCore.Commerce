@@ -41,6 +41,6 @@ public static class UserServiceExtensions
         where TPart : ContentPart, new()
     {
         contentType ??= typeof(TPart).Name.RegexReplace("Part$", string.Empty);
-        return service.GetUserSetting(user, contentType)?.GetOrCreate<TPart>();
+        return service.GetUserSetting(user, contentType)?.GetMaybe<TPart>();
     }
 }

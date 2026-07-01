@@ -1,4 +1,4 @@
-using OrchardCore.Commerce.Models;
+﻿using OrchardCore.Commerce.Models;
 using OrchardCore.ContentManagement;
 using System.Linq;
 using YesSql.Indexes;
@@ -22,7 +22,7 @@ public class PriceIndexProvider : IndexProvider<ContentItem>
             {
                 if (!contentItem.Published || !contentItem.Latest) return null;
 
-                if (contentItem.GetOrCreate<PricePart>() is { Price.Value: var price })
+                if (contentItem.GetMaybe<PricePart>() is { Price.Value: var price })
                 {
                     return new PriceIndex
                     {
@@ -31,7 +31,7 @@ public class PriceIndexProvider : IndexProvider<ContentItem>
                     };
                 }
 
-                var variants = contentItem.GetOrCreate<PriceVariantsPart>()?.Variants;
+                var variants = contentItem.GetMaybe<PriceVariantsPart>()?.Variants;
                 if (variants?.Any() == true)
                 {
                     var amounts = variants.Values.Select(amount => amount.Value).ToList();

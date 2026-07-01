@@ -32,11 +32,11 @@ public class LocalInventoryProvider : IProductInventoryProvider
     public Task<bool> IsApplicableAsync(IList<ShoppingCartItem> model) => Task.FromResult(true);
 
     public async Task<IDictionary<string, int>> QueryAllInventoriesAsync(string sku) =>
-        (await _productService.GetProductAsync(sku))?.GetOrCreate<InventoryPart>()?.Inventory;
+        (await _productService.GetProductAsync(sku))?.GetMaybe<InventoryPart>()?.Inventory;
 
     public async Task<int> QueryInventoryAsync(string sku, string fullSku = null)
     {
-        var inventoryPart = (await _productService.GetProductAsync(sku))?.GetOrCreate<InventoryPart>();
+        var inventoryPart = (await _productService.GetProductAsync(sku))?.GetMaybe<InventoryPart>();
 
         // If fullSku is specified, look for Price Variant Product's inventory.
         var inventoryIdentifier = string.IsNullOrEmpty(fullSku) ? sku : fullSku;

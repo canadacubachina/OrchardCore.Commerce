@@ -163,7 +163,7 @@ public class ShoppingCartController : Controller
             if (!isValid)
             {
                 var minOrderQuantity = (await _productService.GetProductAsync(line.ProductSku))?
-                    .GetOrCreate<InventoryPart>()?
+                    .GetMaybe<InventoryPart>()?
                     .MinimumOrderQuantity
                     .Value ?? 0;
 

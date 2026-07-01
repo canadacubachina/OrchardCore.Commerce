@@ -1,29 +1,19 @@
-@using Microsoft.AspNetCore.Mvc.Routing
+@using OrchardCore
 @using OrchardCore.Commerce.Abstractions.Abstractions
 @using OrchardCore.Commerce.Abstractions.ViewModels
-
 @{
     var line = (ShoppingCartLineViewModel)Model.Line;
     var attributes = (IList<(IProductAttributeValue Value, string Type, int Index)>)Model.ProductAttributes;
-
-    // Unique ID for ARIA
-    var productId = $"cart-product-{line.Product.ContentItem.ContentItemId}";
+    var url = await Orchard.GetItemDisplayUrlAsync(line.Product.ContentItem.ContentItemId);
 }
 
 <div class="cart-product-name">
-    <a href="@Url.DisplayContentItem(line.Product.ContentItem.ContentItemId)"
-       class="link-primary"
-       aria-labelledby="@productId">
-        <span id="@productId">@line.ProductName</span>
-    </a>
+    <a href="@url" class="link-primary">@line.ProductName</a>
 </div>
 
 @if (line.Attributes?.Any() == true)
 {
-    <ul class="cart-product-attributes list-inline"
-        role="list"
-        aria-label="@T["Product attributes"]">
-
+    <ul class="cart-product-attributes list-inline">
         @foreach (var (attribute, type, _) in attributes)
         {
             <shape tag="li"
