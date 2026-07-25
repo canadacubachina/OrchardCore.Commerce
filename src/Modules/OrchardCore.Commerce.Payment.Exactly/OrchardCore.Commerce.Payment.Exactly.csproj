@@ -30,7 +30,7 @@
     <ItemGroup>
         <PackageReference Include="OrchardCore.Module.Targets" />
       
-       <PackageReference Include="Lombiq.HelpfulLibraries.Refit" /> 
+       <!--<PackageReference Include="Lombiq.HelpfulLibraries.Refit" />--> 
     </ItemGroup>
 
     
@@ -39,7 +39,7 @@
          <ProjectReference Include="..\OrchardCore.Commerce.Payment\OrchardCore.Commerce.Payment.csproj" />
         <ProjectReference Include="..\OrchardCore.Commerce.Promotion\OrchardCore.Commerce.Promotion.csproj" />
 
-         <!--<ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.Refit\Lombiq.HelpfulLibraries.Refit.csproj" />-->
+         <ProjectReference Include="..\..\..\..\Helpful-Libraries\Lombiq.HelpfulLibraries.Refit\Lombiq.HelpfulLibraries.Refit.csproj" />
     </ItemGroup>
    
 </Project>
